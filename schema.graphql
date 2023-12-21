@@ -1,0 +1,741 @@
+type EventsSummary {
+  id: ID!
+    cashKYCSenderReceiver_Approval: [CashKYCSenderReceiver_Approval!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_ApprovalCount: BigInt!
+    cashKYCSenderReceiver_Initialized: [CashKYCSenderReceiver_Initialized!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_InitializedCount: BigInt!
+    cashKYCSenderReceiver_KYCRegistrySet: [CashKYCSenderReceiver_KYCRegistrySet!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_KYCRegistrySetCount: BigInt!
+    cashKYCSenderReceiver_KYCRequirementGroupSet: [CashKYCSenderReceiver_KYCRequirementGroupSet!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_KYCRequirementGroupSetCount: BigInt!
+    cashKYCSenderReceiver_Paused: [CashKYCSenderReceiver_Paused!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_PausedCount: BigInt!
+    cashKYCSenderReceiver_RoleAdminChanged: [CashKYCSenderReceiver_RoleAdminChanged!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_RoleAdminChangedCount: BigInt!
+    cashKYCSenderReceiver_RoleGranted: [CashKYCSenderReceiver_RoleGranted!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_RoleGrantedCount: BigInt!
+    cashKYCSenderReceiver_RoleRevoked: [CashKYCSenderReceiver_RoleRevoked!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_RoleRevokedCount: BigInt!
+    cashKYCSenderReceiver_Transfer: [CashKYCSenderReceiver_Transfer!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_TransferCount: BigInt!
+    cashKYCSenderReceiver_Unpaused: [CashKYCSenderReceiver_Unpaused!]! @derivedFrom(field: "eventsSummary")
+    cashKYCSenderReceiver_UnpausedCount: BigInt!
+    cashManager_AdminMintedCash: [CashManager_AdminMintedCash!]! @derivedFrom(field: "eventsSummary")
+    cashManager_AdminMintedCashCount: BigInt!
+    cashManager_AssetRecipientSet: [CashManager_AssetRecipientSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_AssetRecipientSetCount: BigInt!
+    cashManager_AssetSenderSet: [CashManager_AssetSenderSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_AssetSenderSetCount: BigInt!
+    cashManager_EpochDurationSet: [CashManager_EpochDurationSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_EpochDurationSetCount: BigInt!
+    cashManager_EpochStartTimestampOffsetSet: [CashManager_EpochStartTimestampOffsetSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_EpochStartTimestampOffsetSetCount: BigInt!
+    cashManager_ExcessMintClaimed: [CashManager_ExcessMintClaimed!]! @derivedFrom(field: "eventsSummary")
+    cashManager_ExcessMintClaimedCount: BigInt!
+    cashManager_ExchangeRateDeltaLimitSet: [CashManager_ExchangeRateDeltaLimitSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_ExchangeRateDeltaLimitSetCount: BigInt!
+    cashManager_FeeRecipientSet: [CashManager_FeeRecipientSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_FeeRecipientSetCount: BigInt!
+    cashManager_InstantMint: [CashManager_InstantMint!]! @derivedFrom(field: "eventsSummary")
+    cashManager_InstantMintCount: BigInt!
+    cashManager_InstantMintFeeSet: [CashManager_InstantMintFeeSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_InstantMintFeeSetCount: BigInt!
+    cashManager_InstantMintPercentSet: [CashManager_InstantMintPercentSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_InstantMintPercentSetCount: BigInt!
+    cashManager_InstantMintingEnabled: [CashManager_InstantMintingEnabled!]! @derivedFrom(field: "eventsSummary")
+    cashManager_InstantMintingEnabledCount: BigInt!
+    cashManager_KYCRegistrySet: [CashManager_KYCRegistrySet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_KYCRegistrySetCount: BigInt!
+    cashManager_KYCRequirementGroupSet: [CashManager_KYCRequirementGroupSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_KYCRequirementGroupSetCount: BigInt!
+    cashManager_MaxAdminMintAmountSet: [CashManager_MaxAdminMintAmountSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MaxAdminMintAmountSetCount: BigInt!
+    cashManager_MinimumDepositAmountSet: [CashManager_MinimumDepositAmountSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MinimumDepositAmountSetCount: BigInt!
+    cashManager_MinimumRedeemAmountSet: [CashManager_MinimumRedeemAmountSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MinimumRedeemAmountSetCount: BigInt!
+    cashManager_MintCompleted: [CashManager_MintCompleted!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MintCompletedCount: BigInt!
+    cashManager_MintExchangeRateCheckFailed: [CashManager_MintExchangeRateCheckFailed!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MintExchangeRateCheckFailedCount: BigInt!
+    cashManager_MintExchangeRateOverridden: [CashManager_MintExchangeRateOverridden!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MintExchangeRateOverriddenCount: BigInt!
+    cashManager_MintExchangeRateSet: [CashManager_MintExchangeRateSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MintExchangeRateSetCount: BigInt!
+    cashManager_MintFeeSet: [CashManager_MintFeeSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MintFeeSetCount: BigInt!
+    cashManager_MintLimitSet: [CashManager_MintLimitSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MintLimitSetCount: BigInt!
+    cashManager_MintRequested: [CashManager_MintRequested!]! @derivedFrom(field: "eventsSummary")
+    cashManager_MintRequestedCount: BigInt!
+    cashManager_Paused: [CashManager_Paused!]! @derivedFrom(field: "eventsSummary")
+    cashManager_PausedCount: BigInt!
+    cashManager_PendingInstantMintBalanceSet: [CashManager_PendingInstantMintBalanceSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_PendingInstantMintBalanceSetCount: BigInt!
+    cashManager_PendingMintBalanceSet: [CashManager_PendingMintBalanceSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_PendingMintBalanceSetCount: BigInt!
+    cashManager_PendingRedemptionBalanceSet: [CashManager_PendingRedemptionBalanceSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_PendingRedemptionBalanceSetCount: BigInt!
+    cashManager_RedeemLimitSet: [CashManager_RedeemLimitSet!]! @derivedFrom(field: "eventsSummary")
+    cashManager_RedeemLimitSetCount: BigInt!
+    cashManager_RedemptionCompleted: [CashManager_RedemptionCompleted!]! @derivedFrom(field: "eventsSummary")
+    cashManager_RedemptionCompletedCount: BigInt!
+    cashManager_RedemptionFeesCollected: [CashManager_RedemptionFeesCollected!]! @derivedFrom(field: "eventsSummary")
+    cashManager_RedemptionFeesCollectedCount: BigInt!
+    cashManager_RedemptionRequested: [CashManager_RedemptionRequested!]! @derivedFrom(field: "eventsSummary")
+    cashManager_RedemptionRequestedCount: BigInt!
+    cashManager_RefundIssued: [CashManager_RefundIssued!]! @derivedFrom(field: "eventsSummary")
+    cashManager_RefundIssuedCount: BigInt!
+    cashManager_RoleAdminChanged: [CashManager_RoleAdminChanged!]! @derivedFrom(field: "eventsSummary")
+    cashManager_RoleAdminChangedCount: BigInt!
+    cashManager_RoleGranted: [CashManager_RoleGranted!]! @derivedFrom(field: "eventsSummary")
+    cashManager_RoleGrantedCount: BigInt!
+    cashManager_RoleRevoked: [CashManager_RoleRevoked!]! @derivedFrom(field: "eventsSummary")
+    cashManager_RoleRevokedCount: BigInt!
+    cashManager_Unpaused: [CashManager_Unpaused!]! @derivedFrom(field: "eventsSummary")
+    cashManager_UnpausedCount: BigInt!
+    kYCRegistry_KYCAddressAddViaSignature: [KYCRegistry_KYCAddressAddViaSignature!]! @derivedFrom(field: "eventsSummary")
+    kYCRegistry_KYCAddressAddViaSignatureCount: BigInt!
+    kYCRegistry_KYCAddressesAdded: [KYCRegistry_KYCAddressesAdded!]! @derivedFrom(field: "eventsSummary")
+    kYCRegistry_KYCAddressesAddedCount: BigInt!
+    kYCRegistry_KYCAddressesRemoved: [KYCRegistry_KYCAddressesRemoved!]! @derivedFrom(field: "eventsSummary")
+    kYCRegistry_KYCAddressesRemovedCount: BigInt!
+    kYCRegistry_RoleAdminChanged: [KYCRegistry_RoleAdminChanged!]! @derivedFrom(field: "eventsSummary")
+    kYCRegistry_RoleAdminChangedCount: BigInt!
+    kYCRegistry_RoleAssignedToKYCGroup: [KYCRegistry_RoleAssignedToKYCGroup!]! @derivedFrom(field: "eventsSummary")
+    kYCRegistry_RoleAssignedToKYCGroupCount: BigInt!
+    kYCRegistry_RoleGranted: [KYCRegistry_RoleGranted!]! @derivedFrom(field: "eventsSummary")
+    kYCRegistry_RoleGrantedCount: BigInt!
+    kYCRegistry_RoleRevoked: [KYCRegistry_RoleRevoked!]! @derivedFrom(field: "eventsSummary")
+    kYCRegistry_RoleRevokedCount: BigInt!
+    oUSGManager_AssetSenderSet: [OUSGManager_AssetSenderSet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_AssetSenderSetCount: BigInt!
+    oUSGManager_DepositProofAdded: [OUSGManager_DepositProofAdded!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_DepositProofAddedCount: BigInt!
+    oUSGManager_DepositorOverwritten: [OUSGManager_DepositorOverwritten!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_DepositorOverwrittenCount: BigInt!
+    oUSGManager_FeeRecipientSet: [OUSGManager_FeeRecipientSet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_FeeRecipientSetCount: BigInt!
+    oUSGManager_KYCRegistrySet: [OUSGManager_KYCRegistrySet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_KYCRegistrySetCount: BigInt!
+    oUSGManager_KYCRequirementGroupSet: [OUSGManager_KYCRequirementGroupSet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_KYCRequirementGroupSetCount: BigInt!
+    oUSGManager_MinimumDepositAmountSet: [OUSGManager_MinimumDepositAmountSet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_MinimumDepositAmountSetCount: BigInt!
+    oUSGManager_MinimumRedemptionAmountSet: [OUSGManager_MinimumRedemptionAmountSet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_MinimumRedemptionAmountSetCount: BigInt!
+    oUSGManager_MintCompleted: [OUSGManager_MintCompleted!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_MintCompletedCount: BigInt!
+    oUSGManager_MintFeeSet: [OUSGManager_MintFeeSet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_MintFeeSetCount: BigInt!
+    oUSGManager_MintRequested: [OUSGManager_MintRequested!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_MintRequestedCount: BigInt!
+    oUSGManager_NewPricerSet: [OUSGManager_NewPricerSet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_NewPricerSetCount: BigInt!
+    oUSGManager_OffChainRedemptionMinimumSet: [OUSGManager_OffChainRedemptionMinimumSet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_OffChainRedemptionMinimumSetCount: BigInt!
+    oUSGManager_OffChainRedemptionPaused: [OUSGManager_OffChainRedemptionPaused!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_OffChainRedemptionPausedCount: BigInt!
+    oUSGManager_OffChainRedemptionUnpaused: [OUSGManager_OffChainRedemptionUnpaused!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_OffChainRedemptionUnpausedCount: BigInt!
+    oUSGManager_PriceIdSetForDeposit: [OUSGManager_PriceIdSetForDeposit!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_PriceIdSetForDepositCount: BigInt!
+    oUSGManager_PriceIdSetForRedemption: [OUSGManager_PriceIdSetForRedemption!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_PriceIdSetForRedemptionCount: BigInt!
+    oUSGManager_RedeemerOverwritten: [OUSGManager_RedeemerOverwritten!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RedeemerOverwrittenCount: BigInt!
+    oUSGManager_RedemptionCompleted: [OUSGManager_RedemptionCompleted!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RedemptionCompletedCount: BigInt!
+    oUSGManager_RedemptionFeeSet: [OUSGManager_RedemptionFeeSet!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RedemptionFeeSetCount: BigInt!
+    oUSGManager_RedemptionPaused: [OUSGManager_RedemptionPaused!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RedemptionPausedCount: BigInt!
+    oUSGManager_RedemptionProofAdded: [OUSGManager_RedemptionProofAdded!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RedemptionProofAddedCount: BigInt!
+    oUSGManager_RedemptionRequested: [OUSGManager_RedemptionRequested!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RedemptionRequestedCount: BigInt!
+    oUSGManager_RedemptionRequestedServicedOffChain: [OUSGManager_RedemptionRequestedServicedOffChain!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RedemptionRequestedServicedOffChainCount: BigInt!
+    oUSGManager_RedemptionUnpaused: [OUSGManager_RedemptionUnpaused!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RedemptionUnpausedCount: BigInt!
+    oUSGManager_RoleAdminChanged: [OUSGManager_RoleAdminChanged!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RoleAdminChangedCount: BigInt!
+    oUSGManager_RoleGranted: [OUSGManager_RoleGranted!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RoleGrantedCount: BigInt!
+    oUSGManager_RoleRevoked: [OUSGManager_RoleRevoked!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_RoleRevokedCount: BigInt!
+    oUSGManager_SubscriptionPaused: [OUSGManager_SubscriptionPaused!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_SubscriptionPausedCount: BigInt!
+    oUSGManager_SubscriptionUnpaused: [OUSGManager_SubscriptionUnpaused!]! @derivedFrom(field: "eventsSummary")
+    oUSGManager_SubscriptionUnpausedCount: BigInt!
+}
+    type CashKYCSenderReceiver_Approval {
+  id: ID!
+      owner: String!
+      spender: String!
+      value: BigInt!
+    eventsSummary: String!
+}
+    type CashKYCSenderReceiver_Initialized {
+  id: ID!
+      version: BigInt!
+    eventsSummary: String!
+}
+    type CashKYCSenderReceiver_KYCRegistrySet {
+  id: ID!
+      oldRegistry: String!
+      newRegistry: String!
+    eventsSummary: String!
+}
+    type CashKYCSenderReceiver_KYCRequirementGroupSet {
+  id: ID!
+      oldRequirementGroup: BigInt!
+      newRequirementGroup: BigInt!
+    eventsSummary: String!
+}
+    type CashKYCSenderReceiver_Paused {
+  id: ID!
+      account: String!
+    eventsSummary: String!
+}
+    type CashKYCSenderReceiver_RoleAdminChanged {
+  id: ID!
+      role: String!
+      previousAdminRole: String!
+      newAdminRole: String!
+    eventsSummary: String!
+}
+    type CashKYCSenderReceiver_RoleGranted {
+  id: ID!
+      role: String!
+      account: String!
+      sender: String!
+    eventsSummary: String!
+}
+    type CashKYCSenderReceiver_RoleRevoked {
+  id: ID!
+      role: String!
+      account: String!
+      sender: String!
+    eventsSummary: String!
+}
+    type CashKYCSenderReceiver_Transfer {
+  id: ID!
+      from: String!
+      to: String!
+      value: BigInt!
+    eventsSummary: String!
+}
+    type CashKYCSenderReceiver_Unpaused {
+  id: ID!
+      account: String!
+    eventsSummary: String!
+}
+    type CashManager_AdminMintedCash {
+  id: ID!
+      user: String!
+      amount: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_AssetRecipientSet {
+  id: ID!
+      oldAssetRecipient: String!
+      newAssetRecipient: String!
+    eventsSummary: String!
+}
+    type CashManager_AssetSenderSet {
+  id: ID!
+      oldAssetSender: String!
+      newAssetSender: String!
+    eventsSummary: String!
+}
+    type CashManager_EpochDurationSet {
+  id: ID!
+      oldDuration: BigInt!
+      newDuration: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_EpochStartTimestampOffsetSet {
+  id: ID!
+      oldOffset: BigInt!
+      newOffset: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_ExcessMintClaimed {
+  id: ID!
+      user: String!
+      cashAmountOwed: BigInt!
+      cashAmountGiven: BigInt!
+      collateralAmountDeposited: BigInt!
+      exchangeRate: BigInt!
+      epochClaimedFrom: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_ExchangeRateDeltaLimitSet {
+  id: ID!
+      oldLimit: BigInt!
+      newLimit: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_FeeRecipientSet {
+  id: ID!
+      oldFeeRecipient: String!
+      newFeeRecipient: String!
+    eventsSummary: String!
+}
+    type CashManager_InstantMint {
+  id: ID!
+      user: String!
+      epoch: BigInt!
+      collateralAmountDeposited: BigInt!
+      depositAmountAfterFee: BigInt!
+      feeAmount: BigInt!
+      instantMintAmount: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_InstantMintFeeSet {
+  id: ID!
+      oldFee: BigInt!
+      newFee: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_InstantMintPercentSet {
+  id: ID!
+      oldInstantMintBPS: BigInt!
+      newInstantMintBPS: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_InstantMintingEnabled {
+  id: ID!
+      status: Boolean!
+    eventsSummary: String!
+}
+    type CashManager_KYCRegistrySet {
+  id: ID!
+      oldRegistry: String!
+      newRegistry: String!
+    eventsSummary: String!
+}
+    type CashManager_KYCRequirementGroupSet {
+  id: ID!
+      oldRequirementGroup: BigInt!
+      newRequirementGroup: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MaxAdminMintAmountSet {
+  id: ID!
+      oldMaxAdminMintAmount: BigInt!
+      newMaxAdminMintAmount: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MinimumDepositAmountSet {
+  id: ID!
+      oldMinimum: BigInt!
+      newMinimum: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MinimumRedeemAmountSet {
+  id: ID!
+      oldRedeemMin: BigInt!
+      newRedeemMin: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MintCompleted {
+  id: ID!
+      user: String!
+      cashAmountOut: BigInt!
+      collateralAmountDeposited: BigInt!
+      exchangeRate: BigInt!
+      epochClaimedFrom: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MintExchangeRateCheckFailed {
+  id: ID!
+      epoch: BigInt!
+      lastEpochRate: BigInt!
+      newRate: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MintExchangeRateOverridden {
+  id: ID!
+      epoch: BigInt!
+      oldRate: BigInt!
+      newRate: BigInt!
+      lastSetMintExchangeRate: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MintExchangeRateSet {
+  id: ID!
+      epoch: BigInt!
+      oldRate: BigInt!
+      newRate: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MintFeeSet {
+  id: ID!
+      oldFee: BigInt!
+      newFee: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MintLimitSet {
+  id: ID!
+      oldLimit: BigInt!
+      newLimit: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_MintRequested {
+  id: ID!
+      user: String!
+      epoch: BigInt!
+      collateralAmountDeposited: BigInt!
+      depositAmountAfterFee: BigInt!
+      feeAmount: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_Paused {
+  id: ID!
+      account: String!
+    eventsSummary: String!
+}
+    type CashManager_PendingInstantMintBalanceSet {
+  id: ID!
+      user: String!
+      epoch: BigInt!
+      oldBalance: BigInt!
+      newBalance: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_PendingMintBalanceSet {
+  id: ID!
+      user: String!
+      epoch: BigInt!
+      oldBalance: BigInt!
+      newBalance: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_PendingRedemptionBalanceSet {
+  id: ID!
+      user: String!
+      epoch: BigInt!
+      balance: BigInt!
+      totalBurned: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_RedeemLimitSet {
+  id: ID!
+      oldLimit: BigInt!
+      newLimit: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_RedemptionCompleted {
+  id: ID!
+      user: String!
+      cashAmountRequested: BigInt!
+      collateralAmountReturned: BigInt!
+      epoch: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_RedemptionFeesCollected {
+  id: ID!
+      beneficiary: String!
+      collateralAmountOut: BigInt!
+      epoch: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_RedemptionRequested {
+  id: ID!
+      user: String!
+      cashAmountIn: BigInt!
+      epoch: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_RefundIssued {
+  id: ID!
+      user: String!
+      cashAmountOut: BigInt!
+      epoch: BigInt!
+    eventsSummary: String!
+}
+    type CashManager_RoleAdminChanged {
+  id: ID!
+      role: String!
+      previousAdminRole: String!
+      newAdminRole: String!
+    eventsSummary: String!
+}
+    type CashManager_RoleGranted {
+  id: ID!
+      role: String!
+      account: String!
+      sender: String!
+    eventsSummary: String!
+}
+    type CashManager_RoleRevoked {
+  id: ID!
+      role: String!
+      account: String!
+      sender: String!
+    eventsSummary: String!
+}
+    type CashManager_Unpaused {
+  id: ID!
+      account: String!
+    eventsSummary: String!
+}
+    type KYCRegistry_KYCAddressAddViaSignature {
+  id: ID!
+      sender: String!
+      user: String!
+      signer: String!
+      kycRequirementGroup: BigInt!
+      deadline: BigInt!
+    eventsSummary: String!
+}
+    type KYCRegistry_KYCAddressesAdded {
+  id: ID!
+      sender: String!
+      kycRequirementGroup: BigInt!
+      addresses: [String!]!
+    eventsSummary: String!
+}
+    type KYCRegistry_KYCAddressesRemoved {
+  id: ID!
+      sender: String!
+      kycRequirementGroup: BigInt!
+      addresses: [String!]!
+    eventsSummary: String!
+}
+    type KYCRegistry_RoleAdminChanged {
+  id: ID!
+      role: String!
+      previousAdminRole: String!
+      newAdminRole: String!
+    eventsSummary: String!
+}
+    type KYCRegistry_RoleAssignedToKYCGroup {
+  id: ID!
+      kycRequirementGroup: BigInt!
+      role: String!
+    eventsSummary: String!
+}
+    type KYCRegistry_RoleGranted {
+  id: ID!
+      role: String!
+      account: String!
+      sender: String!
+    eventsSummary: String!
+}
+    type KYCRegistry_RoleRevoked {
+  id: ID!
+      role: String!
+      account: String!
+      sender: String!
+    eventsSummary: String!
+}
+    type OUSGManager_AssetSenderSet {
+  id: ID!
+      oldAssetSender: String!
+      newAssetSender: String!
+    eventsSummary: String!
+}
+    type OUSGManager_DepositProofAdded {
+  id: ID!
+      txHash: String!
+      user: String!
+      depositAmountAfterFee: BigInt!
+      feeAmount: BigInt!
+      timestamp: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_DepositorOverwritten {
+  id: ID!
+      depositId: String!
+      oldDepositor: String!
+      newDepositor: String!
+      oldPriceId: BigInt!
+      newPriceId: BigInt!
+      oldDepositAmount: BigInt!
+      newDepositAmount: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_FeeRecipientSet {
+  id: ID!
+      oldFeeRecipient: String!
+      newFeeRecipient: String!
+    eventsSummary: String!
+}
+    type OUSGManager_KYCRegistrySet {
+  id: ID!
+      oldRegistry: String!
+      newRegistry: String!
+    eventsSummary: String!
+}
+    type OUSGManager_KYCRequirementGroupSet {
+  id: ID!
+      oldRequirementGroup: BigInt!
+      newRequirementGroup: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_MinimumDepositAmountSet {
+  id: ID!
+      oldMinimum: BigInt!
+      newMinimum: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_MinimumRedemptionAmountSet {
+  id: ID!
+      oldRedemptionMin: BigInt!
+      newRedemptionMin: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_MintCompleted {
+  id: ID!
+      user: String!
+      depositId: String!
+      rwaAmountOut: BigInt!
+      collateralAmountDeposited: BigInt!
+      price: BigInt!
+      priceId: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_MintFeeSet {
+  id: ID!
+      oldFee: BigInt!
+      newFee: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_MintRequested {
+  id: ID!
+      user: String!
+      depositId: String!
+      collateralAmountDeposited: BigInt!
+      depositAmountAfterFee: BigInt!
+      feeAmount: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_NewPricerSet {
+  id: ID!
+      oldPricer: String!
+      newPricer: String!
+    eventsSummary: String!
+}
+    type OUSGManager_OffChainRedemptionMinimumSet {
+  id: ID!
+      oldMinimum: BigInt!
+      newMinimum: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_OffChainRedemptionPaused {
+  id: ID!
+      caller: String!
+    eventsSummary: String!
+}
+    type OUSGManager_OffChainRedemptionUnpaused {
+  id: ID!
+      caller: String!
+    eventsSummary: String!
+}
+    type OUSGManager_PriceIdSetForDeposit {
+  id: ID!
+      depositIdSet: String!
+      priceIdSet: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_PriceIdSetForRedemption {
+  id: ID!
+      redemptionIdSet: String!
+      priceIdSet: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_RedeemerOverwritten {
+  id: ID!
+      redemptionId: String!
+      oldRedeemer: String!
+      newRedeemer: String!
+      oldPriceId: BigInt!
+      newPriceId: BigInt!
+      oldRWATokenAmountBurned: BigInt!
+      newRWATokenAmountBurned: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_RedemptionCompleted {
+  id: ID!
+      user: String!
+      redemptionId: String!
+      rwaAmountRequested: BigInt!
+      collateralAmountReturned: BigInt!
+      feeAmount: BigInt!
+      price: BigInt!
+      priceId: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_RedemptionFeeSet {
+  id: ID!
+      oldFee: BigInt!
+      newFee: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_RedemptionPaused {
+  id: ID!
+      caller: String!
+    eventsSummary: String!
+}
+    type OUSGManager_RedemptionProofAdded {
+  id: ID!
+      txHash: String!
+      user: String!
+      rwaAmountBurned: BigInt!
+      timestamp: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_RedemptionRequested {
+  id: ID!
+      user: String!
+      redemptionId: String!
+      rwaAmountIn: BigInt!
+    eventsSummary: String!
+}
+    type OUSGManager_RedemptionRequestedServicedOffChain {
+  id: ID!
+      user: String!
+      redemptionId: String!
+      rwaTokenAmountIn: BigInt!
+      offChainDestination: String!
+    eventsSummary: String!
+}
+    type OUSGManager_RedemptionUnpaused {
+  id: ID!
+      caller: String!
+    eventsSummary: String!
+}
+    type OUSGManager_RoleAdminChanged {
+  id: ID!
+      role: String!
+      previousAdminRole: String!
+      newAdminRole: String!
+    eventsSummary: String!
+}
+    type OUSGManager_RoleGranted {
+  id: ID!
+      role: String!
+      account: String!
+      sender: String!
+    eventsSummary: String!
+}
+    type OUSGManager_RoleRevoked {
+  id: ID!
+      role: String!
+      account: String!
+      sender: String!
+    eventsSummary: String!
+}
+    type OUSGManager_SubscriptionPaused {
+  id: ID!
+      caller: String!
+    eventsSummary: String!
+}
+    type OUSGManager_SubscriptionUnpaused {
+  id: ID!
+      caller: String!
+    eventsSummary: String!
+}

@@ -1,0 +1,289 @@
+name: ondo
+contracts:
+- name: CashKYCSenderReceiver
+  handler: src/EventHandlers.ts
+  events:
+  - event: Approval(address indexed owner, address indexed spender, uint256 value)
+    requiredEntities:
+    - name: EventsSummary
+  - event: Initialized(uint8 version)
+    requiredEntities:
+    - name: EventsSummary
+  - event: KYCRegistrySet(address oldRegistry, address newRegistry)
+    requiredEntities:
+    - name: EventsSummary
+  - event: KYCRequirementGroupSet(uint256 oldRequirementGroup, uint256 newRequirementGroup)
+    requiredEntities:
+    - name: EventsSummary
+  - event: Paused(address account)
+    requiredEntities:
+    - name: EventsSummary
+  - event: RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+    requiredEntities:
+    - name: EventsSummary
+  - event: RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+    requiredEntities:
+    - name: EventsSummary
+  - event: RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+    requiredEntities:
+    - name: EventsSummary
+  - event: Transfer(address indexed from, address indexed to, uint256 value)
+    requiredEntities:
+    - name: EventsSummary
+  - event: Unpaused(address account)
+    requiredEntities:
+    - name: EventsSummary
+- name: KYCRegistry
+  handler: src/EventHandlers.ts
+  events:
+  - event: KYCAddressAddViaSignature(address indexed sender, address indexed user, address indexed signer, uint256 kycRequirementGroup, uint256 deadline)
+    requiredEntities:
+    - name: EventsSummary
+  - event: KYCAddressesAdded(address indexed sender, uint256 indexed kycRequirementGroup, address[] addresses)
+    requiredEntities:
+    - name: EventsSummary
+  - event: KYCAddressesRemoved(address indexed sender, uint256 indexed kycRequirementGroup, address[] addresses)
+    requiredEntities:
+    - name: EventsSummary
+  - event: RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+    requiredEntities:
+    - name: EventsSummary
+  - event: RoleAssignedToKYCGroup(uint256 indexed kycRequirementGroup, bytes32 indexed role)
+    requiredEntities:
+    - name: EventsSummary
+  - event: RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+    requiredEntities:
+    - name: EventsSummary
+  - event: RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+    requiredEntities:
+    - name: EventsSummary
+networks:
+- id: 1
+  start_block: 0
+  contracts:
+  - name: CashKYCSenderReceiver
+    address:
+    - 0x1B19C19393e2d034D8Ff31ff34c81252FcBbee92
+  - name: KYCRegistry
+    address:
+    - 0x7cE91291846502D50D635163135B2d40a602dc70
+  - name: OUSGManager
+    address:
+    - 0xF16c188c2D411627d39655A60409eC6707D3d5e8
+    handler: src/EventHandlers.ts
+    events:
+    - event: AssetSenderSet(address oldAssetSender, address newAssetSender)
+      requiredEntities:
+      - name: EventsSummary
+    - event: DepositProofAdded(bytes32 indexed txHash, address indexed user, uint256 depositAmountAfterFee, uint256 feeAmount, uint256 timestamp)
+      requiredEntities:
+      - name: EventsSummary
+    - event: DepositorOverwritten(bytes32 indexed depositId, address oldDepositor, address newDepositor, uint256 oldPriceId, uint256 newPriceId, uint256 oldDepositAmount, uint256 newDepositAmount)
+      requiredEntities:
+      - name: EventsSummary
+    - event: FeeRecipientSet(address oldFeeRecipient, address newFeeRecipient)
+      requiredEntities:
+      - name: EventsSummary
+    - event: KYCRegistrySet(address oldRegistry, address newRegistry)
+      requiredEntities:
+      - name: EventsSummary
+    - event: KYCRequirementGroupSet(uint256 oldRequirementGroup, uint256 newRequirementGroup)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MinimumDepositAmountSet(uint256 oldMinimum, uint256 newMinimum)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MinimumRedemptionAmountSet(uint256 oldRedemptionMin, uint256 newRedemptionMin)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintCompleted(address indexed user, bytes32 indexed depositId, uint256 rwaAmountOut, uint256 collateralAmountDeposited, uint256 price, uint256 priceId)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintFeeSet(uint256 oldFee, uint256 newFee)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintRequested(address indexed user, bytes32 indexed depositId, uint256 collateralAmountDeposited, uint256 depositAmountAfterFee, uint256 feeAmount)
+      requiredEntities:
+      - name: EventsSummary
+    - event: NewPricerSet(address oldPricer, address newPricer)
+      requiredEntities:
+      - name: EventsSummary
+    - event: OffChainRedemptionMinimumSet(uint256 oldMinimum, uint256 newMinimum)
+      requiredEntities:
+      - name: EventsSummary
+    - event: OffChainRedemptionPaused(address caller)
+      requiredEntities:
+      - name: EventsSummary
+    - event: OffChainRedemptionUnpaused(address caller)
+      requiredEntities:
+      - name: EventsSummary
+    - event: PriceIdSetForDeposit(bytes32 indexed depositIdSet, uint256 indexed priceIdSet)
+      requiredEntities:
+      - name: EventsSummary
+    - event: PriceIdSetForRedemption(bytes32 indexed redemptionIdSet, uint256 indexed priceIdSet)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedeemerOverwritten(bytes32 indexed redemptionId, address oldRedeemer, address newRedeemer, uint256 oldPriceId, uint256 newPriceId, uint256 oldRWATokenAmountBurned, uint256 newRWATokenAmountBurned)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionCompleted(address indexed user, bytes32 indexed redemptionId, uint256 rwaAmountRequested, uint256 collateralAmountReturned, uint256 feeAmount, uint256 price, uint256 priceId)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionFeeSet(uint256 oldFee, uint256 newFee)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionPaused(address caller)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionProofAdded(bytes32 indexed txHash, address indexed user, uint256 rwaAmountBurned, uint256 timestamp)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionRequested(address indexed user, bytes32 indexed redemptionId, uint256 rwaAmountIn)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionRequestedServicedOffChain(address indexed user, bytes32 indexed redemptionId, uint256 rwaTokenAmountIn, bytes32 offChainDestination)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionUnpaused(address caller)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+      requiredEntities:
+      - name: EventsSummary
+    - event: SubscriptionPaused(address caller)
+      requiredEntities:
+      - name: EventsSummary
+    - event: SubscriptionUnpaused(address caller)
+      requiredEntities:
+      - name: EventsSummary
+- id: 137
+  start_block: 0
+  contracts:
+  - name: CashKYCSenderReceiver
+    address:
+    - 0xbA11C5effA33c4D6F8f593CFA394241CfE925811
+  - name: KYCRegistry
+    address:
+    - 0x7cD852c0D7613aA869e632929560f310D4059AC1
+  - name: CashManager
+    address:
+    - 0x6B7443808ACFCD48f1DE212C2557462fA86Ee945
+    handler: src/EventHandlers.ts
+    events:
+    - event: AdminMintedCash(address indexed user, uint256 amount)
+      requiredEntities:
+      - name: EventsSummary
+    - event: AssetRecipientSet(address oldAssetRecipient, address newAssetRecipient)
+      requiredEntities:
+      - name: EventsSummary
+    - event: AssetSenderSet(address oldAssetSender, address newAssetSender)
+      requiredEntities:
+      - name: EventsSummary
+    - event: EpochDurationSet(uint256 oldDuration, uint256 newDuration)
+      requiredEntities:
+      - name: EventsSummary
+    - event: EpochStartTimestampOffsetSet(uint256 oldOffset, uint256 newOffset)
+      requiredEntities:
+      - name: EventsSummary
+    - event: ExcessMintClaimed(address indexed user, uint256 cashAmountOwed, uint256 cashAmountGiven, uint256 collateralAmountDeposited, uint256 exchangeRate, uint256 indexed epochClaimedFrom)
+      requiredEntities:
+      - name: EventsSummary
+    - event: ExchangeRateDeltaLimitSet(uint256 oldLimit, uint256 newLimit)
+      requiredEntities:
+      - name: EventsSummary
+    - event: FeeRecipientSet(address oldFeeRecipient, address newFeeRecipient)
+      requiredEntities:
+      - name: EventsSummary
+    - event: InstantMint(address indexed user, uint256 indexed epoch, uint256 collateralAmountDeposited, uint256 depositAmountAfterFee, uint256 feeAmount, uint256 instantMintAmount)
+      requiredEntities:
+      - name: EventsSummary
+    - event: InstantMintFeeSet(uint256 oldFee, uint256 newFee)
+      requiredEntities:
+      - name: EventsSummary
+    - event: InstantMintPercentSet(uint256 oldInstantMintBPS, uint256 newInstantMintBPS)
+      requiredEntities:
+      - name: EventsSummary
+    - event: InstantMintingEnabled(bool status)
+      requiredEntities:
+      - name: EventsSummary
+    - event: KYCRegistrySet(address oldRegistry, address newRegistry)
+      requiredEntities:
+      - name: EventsSummary
+    - event: KYCRequirementGroupSet(uint256 oldRequirementGroup, uint256 newRequirementGroup)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MaxAdminMintAmountSet(uint256 oldMaxAdminMintAmount, uint256 newMaxAdminMintAmount)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MinimumDepositAmountSet(uint256 oldMinimum, uint256 newMinimum)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MinimumRedeemAmountSet(uint256 oldRedeemMin, uint256 newRedeemMin)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintCompleted(address indexed user, uint256 cashAmountOut, uint256 collateralAmountDeposited, uint256 exchangeRate, uint256 indexed epochClaimedFrom)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintExchangeRateCheckFailed(uint256 indexed epoch, uint256 lastEpochRate, uint256 newRate)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintExchangeRateOverridden(uint256 indexed epoch, uint256 oldRate, uint256 newRate, uint256 lastSetMintExchangeRate)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintExchangeRateSet(uint256 indexed epoch, uint256 oldRate, uint256 newRate)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintFeeSet(uint256 oldFee, uint256 newFee)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintLimitSet(uint256 oldLimit, uint256 newLimit)
+      requiredEntities:
+      - name: EventsSummary
+    - event: MintRequested(address indexed user, uint256 indexed epoch, uint256 collateralAmountDeposited, uint256 depositAmountAfterFee, uint256 feeAmount)
+      requiredEntities:
+      - name: EventsSummary
+    - event: Paused(address account)
+      requiredEntities:
+      - name: EventsSummary
+    - event: PendingInstantMintBalanceSet(address indexed user, uint256 indexed epoch, uint256 oldBalance, uint256 newBalance)
+      requiredEntities:
+      - name: EventsSummary
+    - event: PendingMintBalanceSet(address indexed user, uint256 indexed epoch, uint256 oldBalance, uint256 newBalance)
+      requiredEntities:
+      - name: EventsSummary
+    - event: PendingRedemptionBalanceSet(address indexed user, uint256 indexed epoch, uint256 balance, uint256 totalBurned)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedeemLimitSet(uint256 oldLimit, uint256 newLimit)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionCompleted(address indexed user, uint256 cashAmountRequested, uint256 collateralAmountReturned, uint256 indexed epoch)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionFeesCollected(address indexed beneficiary, uint256 collateralAmountOut, uint256 indexed epoch)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RedemptionRequested(address indexed user, uint256 cashAmountIn, uint256 indexed epoch)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RefundIssued(address indexed user, uint256 cashAmountOut, uint256 indexed epoch)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+      requiredEntities:
+      - name: EventsSummary
+    - event: RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+      requiredEntities:
+      - name: EventsSummary
+    - event: Unpaused(address account)
+      requiredEntities:
+      - name: EventsSummary
